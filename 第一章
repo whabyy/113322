@@ -1,0 +1,156 @@
+ 8  第1章/listing_1-1.py 
+@@ -0,0 +1,8 @@
+＃第1个程序
+打印 “我爱披萨！”
+打印 “披萨”  *  20
+打印 “ yum”  *  40
+打印 “我吃饱了”。
+
+
+＃这里主要就使用了一个打印函数来显示字符串内容 
+ 26  第1章/listing_1-2.py 
+@@ -0,0 +1,26 @@
+＃-*-编码：utf-8-*-
+＃随机猜数字小游戏
+
+import  random  ＃引入random随机模块
+秘密 =  随机。randint（1，99）     ＃设定一个秘密变量，值为从1-99随机的一个数。
+猜测 =  0
+尝试 =  0
+打印 “哈哈哈！我是恐怖海盗罗伯茨，我有一个秘密！”
+打印 “这个数字是1到99。我将会你尝试6次。”
+
+＃可以猜6次
+而 猜测 ！=  秘密 并 尝试 <  6：                
+    猜 =  输入（“你猜这个数字是？”）  
+    如果 猜测 <  秘密：
+        打印 “低啦，再高点儿！”
+    小精灵 猜猜 >  秘密：
+        打印 “高啦，再低点儿！”
+
+    尝试 =  尝试 +  1             ＃猜的次数递增              
+
+＃最终显示结果
+如果 猜测 ==  秘密：\
+    打印 “ wo〜你猜到了！你猜到了我的私密！”
+其他：
+    打印 “次数用尽！希望你下次能猜得更准，兄弟！”
+    打印 “这次的私密数其实为：”，秘密 
+ 5  第5章/listing_5-1.py 
+@@ -0,0 +1,5 @@
+＃从用户那获取字符串
+
+打印 “输入你的名字：”
+某人 =  raw_input（）
+打印 “嗨”，有人，“今天你感觉如何？” 
+ 6  第5章/listing_5-2.py 
+@@ -0,0 +1,6 @@
+＃逗号做成干嘛的？
+
+打印 “我的”，
+打印 “名称”，
+打印 “是”，
+打印 “戴夫”。 
+ 9  第5章/listing_5-3.py 
+@@ -0,0 +1,9 @@
+＃使用raw_input（）转换温度
+
+打印 “这个程序把华氏度转为乙醚”
+打印 “输入一个华氏度数值：”，
+fahrenheit  =  float（raw_input（））            ＃从用户那里获得华氏温度
+摄氏 =（华氏 -  32）*  5.0  /  9
+打印 “这个华氏度经转换后为”，                           ＃注意结尾处的逗号
+打印 摄氏度，                             这些行数
+打印 “乙醚” 
+ 8  第5章/listing_5-4.py 
+@@ -0,0 +1,8 @@
+＃-*-编码：utf-8-*-
+＃获取网页上的内容
+
+导入 urllib2
+＃file = urllib2.urlopen（'http://helloworldbook.com/data/message.txt'）
+文件 =  urllib2。urlopen（'https://www.qq.com'）
+消息 =  文件。阅读（）
+列印 讯息 
+ 11  第6章/listing_6-1.py 
+@@ -0,0 +1,11 @@
+＃Listing_6-1.py
+＃版权所有Warren＆Carter Sande，2013年
+＃根据MIT许可http://www.opensource.org/licenses/mit-license.php发布
+＃版本$ version ----------------------------
+
+＃第一个EasyGui程序
+
+导入 easygui
+风味 =  easygui。buttonbox（“您最喜欢的冰淇淋口味是什么？”，
+                  choices  = [ '香草'，'巧克力'，'草莓' ]）      ＃选择列表
+easygui。msgbox（“您选择了 +  风味”） 
+ 11  第6章/listing_6-2.py 
+@@ -0,0 +1,11 @@
+＃Listing_6-2.py
+＃版权所有Warren＆Carter Sande，2013年
+＃根据MIT许可http://www.opensource.org/licenses/mit-license.php发布
+＃版本$ version ----------------------------
+
+＃EasyGui-使用选择框选择冰淇淋
+
+导入 easygui
+风味 =  easygui。选择框（“您最喜欢的冰淇淋口味是什么？”，
+                  选择 = [ '香草'，'巧克力'，'草莓' ]
+easygui。msgbox（“您选择了 +  风味”） 
+ 10  第6章/listing_6-3.py 
+@@ -0,0 +1,10 @@
+＃Listing_6-3.py
+＃版权所有Warren＆Carter Sande，2013年
+＃根据MIT许可http://www.opensource.org/licenses/mit-license.php发布
+＃版本$ version ----------------------------
+
+＃EasyGui-使用EnterBox选择冰淇淋
+
+导入 easygui
+风味 =  easygui。enterbox（“您最喜欢的冰淇淋口味是什么？”）
+easygui。msgbox（“您输入了”  +  风味） 
+ 11  第6章/listing_6-4.py 
+@@ -0,0 +1,11 @@
+＃Listing_6-4.py
+＃版权所有Warren＆Carter Sande，2013年
+＃根据MIT许可http://www.opensource.org/licenses/mit-license.php发布
+＃版本$ version ----------------------------
+
+＃EasyGui-EnterBox中的默认选项
+
+导入 easygui
+风味 =  easygui。enterbox（“您最喜欢的冰淇淋口味是什么？”，
+                           default  =  'Vanilla'）               ＃这里是默认值
+easygui。msgbox（“您输入了”  +  风味）
+ 29  第6章/listing_6-5.py 
+@@ -0,0 +1,29 @@
+＃Listing_6-5.py
+＃版权所有Warren＆Carter Sande，2013年
+＃根据MIT许可http://www.opensource.org/licenses/mit-license.php发布
+＃版本$ version ----------------------------
+
+＃使用EasyGui进行数字猜谜游戏
+
+导入 随机，easygui
+秘密 =  随机。randint（1，99）          ＃精选秘密数字
+猜测 =  0
+尝试 =  0
+easygui。msgbox（“”“ AHOY！我是恐惧海盗罗伯茨，我有一个秘密！
+这是从1到99的数字。我会尝试6次。“”“）
+
+＃最多允许6个猜测
+而 猜测 ！=  秘密 并 尝试 <  6：
+    猜 =  easygui。integerbox（“您的猜想是什么，队友？”）       ＃获取玩家的猜想
+    如果 没有 猜测：打破
+    如果 猜测 <  秘密：
+        easygui。msgbox（str（guess）+  “太低了，坏坏脾气的狗！”）
+    小精灵 猜猜 >  秘密：
+        easygui。msgbox（str（猜测）+  “太高了，太笨了！”）
+    trys  =  trys  +  1        ＃用完一次try
+
+＃在游戏结束时打印消息
+如果 猜测 ==  秘密：
+    easygui。msgbox（“ avast！是的！找到了我的秘密，是的！”）
+其他：
+    easygui。msgbox（“没有更多的猜测！数字是”  +  str（秘密））
